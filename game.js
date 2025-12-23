@@ -270,6 +270,24 @@ document.getElementById('up-btn').onclick    = () => handleMove('ArrowUp');
 document.getElementById('down-btn').onclick  = () => handleMove('ArrowDown');
 document.getElementById('left-btn').onclick  = () => handleMove('ArrowLeft');
 document.getElementById('right-btn').onclick = () => handleMove('ArrowRight');
+//touch
+canvas.addEventListener('click', e => {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const px = playerCol * size + size / 2;
+    const py = playerRow * size + size / 2;
+
+    const dx = x - px;
+    const dy = y - py;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        dx > 0 ? handleMove('ArrowRight') : handleMove('ArrowLeft');
+    } else {
+        dy > 0 ? handleMove('ArrowDown') : handleMove('ArrowUp');
+    }
+});
 
 function checkWin() {
     for (let r = 0; r < map.length; r++) {
