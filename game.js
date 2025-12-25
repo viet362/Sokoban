@@ -58,7 +58,7 @@ function resetMap(){
 
 function nextMap(){
     index_level++;
-    if(index_level > Object.keys(maps).length){index_level=0}
+    if(index_level > Object.keys(maps).length - 1){index_level=0}
     originalMap = maps[index_level].map(row => row.split(''));
     map = originalMap.map(row => [...row]);
     document.getElementById("level-info").innerText = "Level " + index_level;
