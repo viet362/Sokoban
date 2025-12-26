@@ -92,12 +92,12 @@ p{
 
 @media (max-width: 768px) {      /* màn hình nhỏ */
     canvas {
-      transform: scale(0.7);       /* thu nhỏ còn 70% */
+      transform: scale(0.9);       /* thu nhỏ còn 90% */
     }
   }
 
   @media (max-width: 480px) {      /* điện thoại nhỏ */
     canvas {
-      transform: scale(0.5);       /* thu nhỏ còn 50% */
+      transform: scale(0.8);       /* thu nhỏ còn 80% */
     }
   }
