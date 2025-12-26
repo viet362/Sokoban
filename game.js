@@ -92,11 +92,28 @@ function randomMap(){
 }
 
 
-function resizeMap(){
-// resize canvas theo map
+function resizeMap() {
+    // Resize canvas đúng theo map
     canvas.width  = map[0].length * size;
     canvas.height = map.length * size;
+
+    // === SCALING TRÊN ĐIỆN THOẠI / MÀN HÌNH NHỎ ===
+    const screenW = window.innerWidth;
+    const screenH = window.innerHeight;
+
+    // Tính tỷ lệ thu nhỏ
+    const scaleW = screenW / canvas.width;
+    const scaleH = screenH / canvas.height;
+
+    // Chọn tỷ lệ nhỏ nhất để không tràn
+    const scale = Math.min(scaleW, scaleH, 1); // không phóng to quá 100%
+
+    // Apply scale bằng CSS
+    canvas.style.transform = `scale(${scale})`;
+    canvas.style.transformOrigin = "top left"; // giúp không lệch vị trí
 }
+
+window.addEventListener('resize', resizeMap);
 
 let anim1 = new Player(canvas,'Images/character.png',4,4);
 let anim_on_target = new Player(canvas,'Images/character_target.png',1,1);
