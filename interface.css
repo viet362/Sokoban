@@ -78,7 +78,7 @@ body {
     border-radius: 8px;
     background-color: #000; /* nếu muốn nền đen */
     display: block;
-    margin: 0 auto;
+    margin: auto;
 }
 
 p{

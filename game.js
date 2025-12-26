@@ -107,10 +107,6 @@ function resizeMap() {
 
     // Chọn tỷ lệ nhỏ nhất để không tràn
     const scale = Math.min(scaleW, scaleH, 1); // không phóng to quá 100%
-
-    // Apply scale bằng CSS
-    canvas.style.transform = `scale(${scale})`;
-    canvas.style.transformOrigin = "top left"; // giúp không lệch vị trí
 }
 
 window.addEventListener('resize', resizeMap);
