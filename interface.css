@@ -91,13 +91,13 @@ p{
 }
 
 @media (max-width: 768px) {      /* màn hình nhỏ */
-    #game-container {
+    canvas {
       transform: scale(0.7);       /* thu nhỏ còn 70% */
     }
   }
 
   @media (max-width: 480px) {      /* điện thoại nhỏ */
-    #game-container {
+    canvas {
       transform: scale(0.5);       /* thu nhỏ còn 50% */
     }
   }
