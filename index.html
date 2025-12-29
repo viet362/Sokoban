@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sokoban Game</title>
+</head>
+<link rel="stylesheet" href="interface.css">
+<body>
+    <div id="game-container">
+        <h1>📦Sokoban Game📦</h1>
+        <div>
+            <button id="undo-btn" onclick="undoMove()">↩ Undo</button>
+            <button id="reset-btn" onclick="resetMap()">↻ Restart</button>
+            <button id="next-btn" onclick="nextMap()">▶ Next</button>
+            <button id="choose-level-btn" onclick="selectMap()">🎯Select</button>
+            <button id="random-level-btn" onclick="randomMap()">🎲Random</button>
+        </div>
+        <div>
+            <div><button id="up-btn">▲</button></div>
+            <div>
+                <button id="left-btn">◀</button>
+                <button id="right-btn">▶</button>
+            </div>
+            <div><button id="down-btn">▼</button></div>
+        </div>
+        <b><p id="level-info">Level: 0</p></b>
+        <center><canvas id = "myCanvas"></canvas></center>
+        <p id="result" style="font-size: 15px; padding: auto;">Hint: Set all box on the coin to win!</p>
+    </div>
+    <script src="map_level.js"></script>
+    <script src="class_objects.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
